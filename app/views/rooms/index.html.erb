@@ -3,5 +3,10 @@
 <%= @current_user.email %>
 <%= @room %>
 
+<h2>Users</h2>
 <%= render @users %>
+
+<h2>Rooms</h2>
 <%= render @rooms %>
+
+<%= link_to 'Sign Out', destroy_user_session_path %>
