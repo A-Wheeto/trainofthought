@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
         @rooms = Room.all
         @users = User.all_except(@current_user)
         @room = Room.new
+        @message = Message.new
       
         render "index"
     end

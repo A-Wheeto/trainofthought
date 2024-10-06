@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'rooms', to: 'rooms#index'
 
-  resources :rooms
   resources :users
+  resources :rooms do
+    resources :messages
+  end
 
   # Defines the root path route ("/")
   root "rooms#index"
